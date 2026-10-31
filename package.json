@@ -1,0 +1,37 @@
+{
+  "name": "game-player-finder-graphql",
+  "version": "0.1.0",
+  "private": true,
+  "description": "Сервіс пошуку гравців для настільних і відеоігор з GraphQL API та аналізом уподобань користувачів (курсова робота, ТНТУ)",
+  "type": "module",
+  "packageManager": "pnpm@12.16.1",
+  "engines": {
+    "node": ">=24.22.2"
+  },
+  "scripts": {
+    "dev": "tsx watch --env-file=.env src/index.ts",
+    "start": "tsx --env-file=.env src/index.ts",
+    "typecheck": "tsc --noEmit",
+    "test": "vitest run",
+    "format": "prettier --write .",
+    "format:check": "prettier --check .",
+    "codegen": "graphql-codegen --config codegen.ts"
+  },
+  "dependencies": {
+    "@apollo/server": "5.5.1",
+    "dataloader": "2.2.3",
+    "graphql": "16.14.2",
+    "mongoose": "9.11.4"
+  },
+  "devDependencies": {
+    "@graphql-codegen/cli": "7.4.6",
+    "@graphql-codegen/typescript": "6.1.2",
+    "@graphql-codegen/typescript-resolvers": "6.1.1",
+    "@types/node": "24.19.2",
+    "mongodb-memory-server": "11.3.0",
+    "prettier": "3.9.10",
+    "tsx": "4.23.15",
+    "typescript": "7.0.2",
+    "vitest": "5.0.5"
+  }
+}
